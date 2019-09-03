@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="小灰的博客">
 <meta property="og:description" content="问题： [‘1’, ‘2’, ‘3’].map(parseInt) what &amp;amp; why ?函数： parseInt(string,radix)将一个字符串转换成redix进制的整数,radix是介于2-36之间的数 参数  string 要被解析的值。如果参数不是一个字符串，则将其转换为字符串(使用ToString抽象方法操作)，字符串的开头将被忽略。 redis一个介于2到36之间的整">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-09-02T15:44:59.068Z">
+<meta property="og:updated_time" content="2019-09-03T06:04:38.480Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="每天一道面试题(1)">
 <meta name="twitter:description" content="问题： [‘1’, ‘2’, ‘3’].map(parseInt) what &amp;amp; why ?函数： parseInt(string,radix)将一个字符串转换成redix进制的整数,radix是介于2-36之间的数 参数  string 要被解析的值。如果参数不是一个字符串，则将其转换为字符串(使用ToString抽象方法操作)，字符串的开头将被忽略。 redis一个介于2到36之间的整">
@@ -293,6 +293,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试/" itemprop="url" rel="index">
+                    <span itemprop="name">面试</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -331,7 +353,7 @@
 <blockquote>
 <p><strong>示例代码</strong></p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="number">100</span>); <span class="comment">//100</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">100</span>,<span class="number">10</span>); <span class="comment">//100</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">100</span>,<span class="number">2</span>); <span class="comment">//4 -&gt;100看成二进制</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">100</span>); <span class="comment">//100</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">100</span>,<span class="number">10</span>); <span class="comment">//100</span></span><br><span class="line"><span class="built_in">parseInt</span>(<span class="number">100</span>,<span class="number">2</span>); <span class="comment">//4 -&gt;100看成二进制</span></span><br></pre></td></tr></table></figure>
 <p><code>如果redix为undefind，或者redix为0或者没有指定的情况下，JavaScript做以下处理</code></p>
 <ul>
 <li><strong>如果字符串string以“0x”开头，则基数是16(十六进制)</strong></li>
@@ -356,18 +378,18 @@
 <blockquote>
 <p><strong>示例代码</strong></p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> number=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">let</span> newNumber=number.map(<span class="built_in">Math</span>.sqrt);<span class="comment">//newNumber的值为[1,2,3],number的值为[1,4,9]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">arr.map(<span class="function">(<span class="params">num</span>)=&gt;</span>num+<span class="number">1</span>); <span class="comment">//[2,3,4]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">let</span> number=[<span class="number">1</span>,<span class="number">4</span>,<span class="number">9</span>];</span><br><span class="line"><span class="keyword">let</span> newNumber=number.map(<span class="built_in">Math</span>.sqrt);<span class="comment">//newNumber的值为[1,2,3],number的值为[1,4,9]</span></span><br><span class="line"><span class="keyword">let</span> arr=[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">arr.map(<span class="function">(<span class="params">num</span>)=&gt;</span>num+<span class="number">1</span>); <span class="comment">//[2,3,4]</span></span><br></pre></td></tr></table></figure>
 <h2 id="回到问题"><a href="#回到问题" class="headerlink" title="回到问题"></a>回到问题</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(parseIn);</span><br></pre></td></tr></table></figure>
 <p>每次迭代map时，parseInt传递两个参数，字符串与基数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="function">(<span class="params">item,index</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">parseInt</span>(item,index);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].map(<span class="function">(<span class="params">item,index</span>)=&gt;</span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">parseInt</span>(item,index);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>将返回的分为</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseInt</span>(<span class="string">'1'</span>,<span class="number">0</span>);</span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'2'</span>,<span class="number">1</span>);</span><br><span class="line"><span class="built_in">parseInt</span>(<span class="string">'3'</span>,<span class="number">2</span>);</span><br></pre></td></tr></table></figure>
-<p>所以返回的结果为<code>1,NaN,NaN</code></p>
+<p>所以返回的结果为 <font color="red">1,NaN,NaN</font></p>
 <blockquote>
 <p><strong>拓展</strong></p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>].map(<span class="built_in">parseInt</span>)</span><br></pre></td></tr></table></figure>
-<p>返回结果为<code>10,NaN,2,3,4</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">[<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>].map(<span class="built_in">parseInt</span>)</span><br></pre></td></tr></table></figure>
+<p>返回结果为<font color="red">10,NaN,2,3,4</font></p>
 
       
     </div>
@@ -407,6 +429,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/03/每天一道面试题-2/" rel="prev" title="每天一道面试题(2)">
+                每天一道面试题(2) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -487,7 +513,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -498,7 +524,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -509,7 +535,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
